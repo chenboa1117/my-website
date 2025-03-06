@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施工成效</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-green-50">
+    <!-- 導覽列 -->
+    <nav class="fixed top-0 w-full bg-green-600 backdrop-blur-lg bg-opacity-80 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-white text-2xl font-bold">立寬環保有限公司</a>
+            <ul class="flex space-x-6">
+                <li><a href="about.html" class="text-white hover:text-blue-400 transition">關於我們</a></li>
+                <li><a href="services.html" class="text-white hover:text-blue-400 transition">服務項目</a></li>
+                <li><a href="projects.html" class="text-white hover:text-blue-400 transition">施工成效</a></li>
+                <li><a href="contact.html" class="text-white hover:text-blue-400 transition">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 施工成效區塊 -->
+    <section class="pt-24 pb-12 px-6">
+        <div class="max-w-screen-xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">施工成效</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- 成效案例1 -->
+                <div class="bg-gradient-to-r from-green-200 via-green-300 to-green-400 rounded-lg shadow-xl p-6 hover:scale-105 transition transform duration-300">
+                    <img src="images/子母.png" alt="案例1" class="w-full h-auto rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mt-4 text-green-800">案例標題1</h3>
+                    <p class="text-gray-700 mt-2">這是案例1的描述，展示了我們如何完成項目並提供有效解決方案。</p>
+                </div>
+                <!-- 成效案例2 -->
+                <div class="bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 rounded-lg shadow-xl p-6 hover:scale-105 transition transform duration-300">
+                    <img src="images/地下室.png" alt="案例2" class="w-full h-auto rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mt-4 text-blue-800">案例標題2</h3>
+                    <p class="text-gray-700 mt-2">這是案例2的描述，展示了我們如何完成項目並提供有效解決方案。</p>
+                </div>
+                <!-- 成效案例3 -->
+                <div class="bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 rounded-lg shadow-xl p-6 hover:scale-105 transition transform duration-300">
+                    <img src="images/高效.jpg" alt="案例3" class="w-full h-auto rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mt-4 text-yellow-800">案例標題3</h3>
+                    <p class="text-gray-700 mt-2">這是案例3的描述，展示了我們如何完成項目並提供有效解決方案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
