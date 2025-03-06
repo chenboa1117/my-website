@@ -1,0 +1,205 @@
+/* 全域樣式 */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+/* 標題樣式 */
+h1 {
+    color: #333;
+    font-size: 40px;
+}
+
+/* 文字樣式 */
+p {
+    color: rgba(255, 255, 255, 0.85); /* 提高對比，避免太淡 */
+}
+
+
+/* 導覽列樣式 */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f1c40f !important;
+}
+
+/* 按鈕樣式 */
+.button {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #2563eb;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #144de8;
+    transform: scale(1.05);
+}
+
+/* Header 區塊 */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('images/banner.jpg') no-repeat center center/cover;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header h1, header p, header .button {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* RWD 響應式設計 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+
+    nav a:first-child {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: auto;
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* 讓導覽列變成直向排列 */
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 14px; /* 縮小字體，避免太擠 */
+        padding: 5px 10px; /* 減少間距 */
+    }
+
+    nav a:first-child {
+        font-size: 16px; /* 讓 LOGO 稍微大一點 */
+        font-weight: bold;
+    }
+}
+/* 漢堡選單按鈕 */
+.menu-toggle {
+    display: none; /* 預設隱藏 */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 行動版樣式 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* 在行動版顯示 */
+        position:  absolute;
+        top: 16px;
+        left: 16px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* 修改透明度 */
+        padding: 16px 0;
+        text-align: center;
+        opacity: 0; /* 預設透明 */
+        transform: translateY(-10px); /* 預設往上偏移 */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        opacity: 1; /* 顯示 */
+        transform: translateY(0); /* 移動回正常位置 */
+    }
+    .nav-links {
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+      
+      .nav-links.hidden {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+      }
+      
+      .nav-links.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+          
+      @media (min-width: 1024px) {
+        h1 {
+            font-size: 48px; /* 可以改成 50px 或更大 */
+        }
+        .button {
+            font-size: 20px; /* 文字稍大 */
+            padding: 18px 36px; /* 增加內距 */
+        }
+    }
+    
+    }
+    

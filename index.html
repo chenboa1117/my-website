@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立寬環保有限公司 | 首頁</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- 🔹 導覽列 (Navbar) 🔹 -->
+    <nav class="fixed top-0 w-full bg-green-700 text-white py-4 px-8 flex justify-between items-center z-50">
+        <a href="#" class="text-2xl font-bold">立寬環保有限公司</a>
+        <ul class="flex space-x-6">
+            <li><a href="about.html" class="hover:text-gray-200 transition">關於我們</a></li>
+            <li><a href="services.html" class="hover:text-gray-200 transition">服務項目</a></li>
+            <li><a href="projects.html" class="hover:text-gray-200 transition">施工成效</a></li>
+            <li><a href="contact.html" class="hover:text-gray-200 transition">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 首頁區塊 🔹 -->
+    <header class="relative bg-cover bg-center h-screen flex flex-col items-center justify-center text-center px-6"
+        style="background-image: url('images/banner.jpg'); background-size: cover; background-position: center;">
+
+        <!-- 內容區塊 -->
+        <div class="relative bg-white bg-opacity-80 p-8 rounded-xl shadow-lg max-w-3xl">
+            <h1 class="text-6xl font-bold text-green-700 leading-relaxed" data-aos="fade-up">
+                歡迎立寬環保有限公司
+            </h1>
+            <p class="text-lg text-gray-700 mt-4" data-aos="fade-up" data-aos-delay="300">
+                專業垃圾清運，讓城市更乾淨！
+            </p>
+            <a href="services.html" class="mt-6 inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 transition">
+                了解我們的服務
+            </a>
+        </div>
+
+    </header>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // 啟動滾動動畫
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
